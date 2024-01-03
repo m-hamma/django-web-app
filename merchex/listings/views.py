@@ -1,3 +1,9 @@
+# ~/projects/django-web-app/merchex/listings/views.py
+
+from django.http import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
+def hello(request):
+    return HttpResponse('<h1>Hello Django!</h1>')
+def about(request):
+    return render(request, "pages/home.html", {})
